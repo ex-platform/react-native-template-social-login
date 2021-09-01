@@ -44,7 +44,10 @@ const App = () => {
           success={(userInfo: any) => console.log(userInfo)}
           fail={() => console.log('FAIL')}
         />
-        <NaverLoginComponent />
+        <NaverLoginComponent
+          success={(userInfo: any) => console.log(userInfo)}
+          fail={() => console.log('FAIL')}
+        />
       </ScrollView>
     </SafeAreaView>
   );
