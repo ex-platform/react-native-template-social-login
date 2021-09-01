@@ -20,6 +20,7 @@ import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
 
 import AppleLogin from './src/components/AppleLogin';
 import KakaoLogin from './src/components/KakaoLogin';
+import NaverLoginComponent from './src/components/NaverLogin';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -43,6 +44,7 @@ const App = () => {
           success={(userInfo: any) => console.log(userInfo)}
           fail={() => console.log('FAIL')}
         />
+        <NaverLoginComponent />
       </ScrollView>
     </SafeAreaView>
   );
