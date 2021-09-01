@@ -16,7 +16,9 @@ import {
   useColorScheme,
 } from 'react-native';
 
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
+import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
+
+import KakaoLogin from './src/components/KakaoLogin';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -32,6 +34,10 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <KakaoLogin
+          success={(userInfo: any) => console.log(userInfo)}
+          fail={() => console.log('FAIL')}
+        />
       </ScrollView>
     </SafeAreaView>
   );
