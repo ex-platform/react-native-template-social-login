@@ -18,6 +18,7 @@ import {
 
 import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
 
+import AppleLogin from './src/components/AppleLogin';
 import KakaoLogin from './src/components/KakaoLogin';
 
 const App = () => {
@@ -35,6 +36,10 @@ const App = () => {
         style={backgroundStyle}>
         <Header />
         <KakaoLogin
+          success={(userInfo: any) => console.log(userInfo)}
+          fail={() => console.log('FAIL')}
+        />
+        <AppleLogin
           success={(userInfo: any) => console.log(userInfo)}
           fail={() => console.log('FAIL')}
         />

@@ -21,16 +21,16 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
-		<array>
-			<dict>
-				<key>CFBundleTypeRole</key>
-					<string>Editor</string>
-				<key>CFBundleURLSchemes</key>
-				<array>
-					<string>kakao9f35e71ef6b2bf481a0a64968e542cde</string>
-				</array>
-			</dict>
-		</array>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao9f35e71ef6b2bf481a0a64968e542cde</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>KAKAO_APP_KEY</key>
