@@ -1,7 +1,4 @@
 # react-native-template-social-login
-
-Info
----
 - Naver
 - Kakao
 - Google
