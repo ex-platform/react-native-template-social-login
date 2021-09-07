@@ -29,7 +29,10 @@ const androidKeys = {
 
 const initials = Platform.OS === 'ios' ? iosKeys : androidKeys;
 
-export default function NaverLoginComponent({ success, fail }: NaverLoginProps) {
+export default function NaverLoginComponent({
+  success,
+  fail,
+}: NaverLoginProps) {
   const [naverToken, setNaverToken] = React.useState(null);
 
   const naverLogin = async (props: any) => {

@@ -8,49 +8,29 @@
  * @format
  */
 
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  useColorScheme,
-} from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './src/screens/Login';
+import OnboardingScreen from './src/screens/Onboarding';
 
-import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
+const Stack = createNativeStackNavigator();
 
-import AppleLogin from './src/components/AppleLogin';
-import KakaoLogin from './src/components/KakaoLogin';
-import NaverLoginComponent from './src/components/NaverLogin';
-
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+export default function App() {
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <KakaoLogin
-          success={(userInfo: any) => console.log(userInfo)}
-          fail={() => console.log('FAIL')}
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Onboarding">
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{ headerShown: false }}
         />
-        <AppleLogin
-          success={(userInfo: any) => console.log(userInfo)}
-          fail={() => console.log('FAIL')}
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
         />
-        <NaverLoginComponent
-          success={(userInfo: any) => console.log(userInfo)}
-          fail={() => console.log('FAIL')}
-        />
-      </ScrollView>
-    </SafeAreaView>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-};
-
-export default App;
+}
