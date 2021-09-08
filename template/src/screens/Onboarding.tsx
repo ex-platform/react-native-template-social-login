@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, StatusBar, Image } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 
-const OnboardingScreen = ({ navigation }) => {
+const OnboardingScreen = ({ navigation }: any) => {
   const onboardingList = [
     {
       backgroundColor: '#fff',
